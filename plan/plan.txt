@@ -1,0 +1,10 @@
+theme
+    youre in a dungeon exploring
+
+what i want
+    no combat only exploring
+    
+
+How things are connected:
+    im gonna use class for places
+    the places have name, dialogue, choices

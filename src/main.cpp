@@ -10,6 +10,7 @@ int Text();
 class Player {
     public:
         string name;
+        string age;
 
         Player(string name) : name(name) {}
 
