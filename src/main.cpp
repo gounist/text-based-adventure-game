@@ -7,12 +7,19 @@ using namespace std;
 void Text_Manager();
 void Text();
 
+class Place {
+	public:
+	 string: name;
+		
+	Place(const string name) : name(name) {}
+
+};
 
 class Player {
     public:
         string name;
-
-        Player(string name) : name(name) {}
+        
+        Player(const string name) : name(name) {}
 
 };
 
@@ -25,14 +32,13 @@ int main()
     cin >> Player_name;
     Player player(Player_name);
 
-    cout << "Welcome " << player.name << endl;
+    cout << "Welcome " << player.name << endl; 
 
     while(true) 
     {
 
 
     }
-
 
     return 0;
 }
