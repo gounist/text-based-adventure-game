@@ -5,8 +5,7 @@ what i want
     no combat only exploring and puzzel to solve you also have inventory to store items.
     your gonna see library, garden, prison, mine shaft.
     people that you can talk to
-    people sharing there story, experiences and passion like a librarian talking about books
-
+    people sharing there story, experiences and passion like a librarian talking about book
 
 How things are coded:
     im gonna use class for place
