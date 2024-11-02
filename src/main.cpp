@@ -4,8 +4,9 @@
 
 using namespace std;
 
-int Text_Manager();
-int Text();
+void Text_Manager();
+void Text();
+
 
 class Player {
     public:
@@ -29,20 +30,21 @@ int main()
     while(true) 
     {
 
+
     }
 
 
     return 0;
 }
 
-int Text_Manager()
+void Text_Manager()
 {
     cout << "test" << endl;
-    return 0;
+
 }
 
-int Text()
+void Text()
 {
-    return 0;
+    
 }
 
