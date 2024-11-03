@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-using namespce std;
+using namespace std;
 
 struct Choice {
 	string text;
@@ -17,7 +17,9 @@ struct Scene {
 
 int main() 
 {
-	vector<Scene> scenes = {0, "test 0", {{"first", 0}, {"second", 0}}};
+	vector<Scene> scenes = {
+	 {0, "test 0", {{"first", 0}, {"second", 0}}}
+	};
 
 	int currentSceneId = 0;
 	while(true)
@@ -33,13 +35,19 @@ int main()
 	 for (size_t i = 0; i < currentScene.choice.size(); i++) {
 	  cout << i + 1 << ". " << currentScene.choice[i].text << endl;	
 	 }
-	 
+
 	 int choice;
-	 cin << choice;
+	 cin >> choice;
 	 
 	 if(choice == 1 || choice == 2) {
-	  currentSceneId = choice - 1;
+	  choice -= 1;
+	  currentSceneId = currentScene.choice[choice].nextSceneId;
 	 }
+	 else{
+	  choice -= 1;
+	  cout << "invalid input" << endl;
+	 }
+
 	}
 }
 
