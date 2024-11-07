@@ -34,10 +34,15 @@ void choiceManager(Scene& currentScene, int& currentSceneId) {
                 choice -= 1;
                 currentSceneId = currentScene.choice[choice].nextSceneId;
                 break; 
-            } else {
+            }
+	    else if (choice == 0) {
+		    interrupted = true;
+		    break;
+	    }
+	    else {
                 cout << "Invalid choice. Please enter 1 or 2." << endl;
             }
-        } else { 
+        }else { 
             cout << "Invalid input. Please enter a number." << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
@@ -50,7 +55,12 @@ int main()
 	signal(SIGINT, signalHandler);
  
 	vector<Scene> scenes = {
-	 {0, "test 0", {{"first", 0}, {"second", 0}}}
+	 {0, "1 and 2 for choosing and 0 if you want to quit", {{"i understand", 1}, {"i understand", 1}}}
+
+	 {1, "", {{"i understand", 1}, {"i understand", 1}}}
+
+
+
 	};
 
 	int currentSceneId = 0;
@@ -59,7 +69,7 @@ int main()
 	 Scene currentScene = scenes[currentSceneId];
 	 for(int i = 0;i < currentScene.description.length(); i++) {
 	  cout << currentScene.description[i];
-	  std::cout.flush(); // Ensure each character is printed immediately
+	  std::cout.flush();
           std::this_thread::sleep_for(std::chrono::milliseconds(100)); 
 	 }
 	 cout << endl;
